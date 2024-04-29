@@ -1,7 +1,9 @@
 package main
 
-import "github.com/KiloProjects/kncli/cmd"
+import (
+	"github.com/KiloProjects/kncli/cmd/kncli"
+)
 
 func main() {
-	cmd.Execute()
+	kncli.Execute()
 }
