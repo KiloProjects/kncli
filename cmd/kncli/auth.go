@@ -6,16 +6,16 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var authCmd = &cobra.Command{
-	Use:   "auth",
-	Short: "Authenticate with Kilonova",
-	Args:  cobra.NoArgs,
-	Run: func(cmd *cobra.Command, args []string) {
-		res := kncli.GenerateRandomNumber()
-		fmt.Println(res)
-	},
-}
-
 func init() {
+	var authCmd = &cobra.Command{
+		Use:   "auth",
+		Short: "Authenticate with Kilonova",
+		Args:  cobra.NoArgs,
+		Run: func(cmd *cobra.Command, args []string) {
+			res := kncli.GenerateRandomNumber()
+			fmt.Println(res)
+		},
+	}
+
 	rootCmd.AddCommand(authCmd)
 }
